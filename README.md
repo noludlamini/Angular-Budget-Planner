@@ -21,12 +21,13 @@ An **elegant budget planner** for interior business owners. Track expenses with 
 ---
 
 ## 📂 Project Structure
+```Plaintext
 budget-planner/
-├── index.html
+├── angular.js
+├──index.html
 ├── styles.css
-├── app.js
 └── screenshot.png
-
+```
 ---
 
 ## Live Demo
