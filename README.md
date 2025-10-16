@@ -30,9 +30,9 @@ budget-planner/
 ```
 ---
 
-## Live Demo
+##  🌐 Live Demo
 
-[Budget Planner] 
+[Budget Planner](https://noludlamini.github.io/Angular-Budget-Planner/)
 
 ---
 
