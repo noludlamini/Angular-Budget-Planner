@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="budgetApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Business Budget Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" ng-controller="BudgetController">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Interior Business Budget Planner</h1>
+      <p class="subtitle">Track and manage your interior business expenses with elegance.</p>
+    </header>
+
+    <!-- Expense Form -->
+    <form ng-submit="addExpense()" class="expense-form">
+      <div class="form-row">
+        <input type="text" ng-model="expense.name" placeholder="Expense Name" required>
+        <input type="number" ng-model="expense.amount" placeholder="Amount (R)" required>
+      </div>
+      <div class="form-row">
+        <input type="text" ng-model="expense.category" placeholder="Category">
+        <input type="date" ng-model="expense.dueDate">
+      </div>
+      <textarea ng-model="expense.notes" placeholder="Notes"></textarea>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Summary -->
+    <div class="summary">
+      <span>Total Expenses:</span>
+      <strong>R{{ getTotal() | number:2 }}</strong>
+    </div>
+
+    <!-- Expenses Table -->
+    <div class="table-container" ng-if="expenses.length > 0">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount (R)</th>
+            <th>Category</th>
+            <th>Due Date</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="expense in expenses">
+            <td>{{ expense.name }}</td>
+            <td>{{ expense.amount | number:2 }}</td>
+            <td>{{ expense.category }}</td>
+            <td>{{ expense.dueDate | date:'yyyy-MM-dd' }}</td>
+            <td>{{ expense.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p ng-if="expenses.length === 0" class="no-expenses">No expenses added yet.</p>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

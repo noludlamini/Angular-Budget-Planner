@@ -1,0 +1,152 @@
+/* Base Styles */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 950px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.header h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.header .subtitle {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+/* Form */
+.expense-form {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #bfa17a;
+  box-shadow: 0 0 10px rgba(191, 161, 122, 0.2);
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Button */
+button {
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #bfa17a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #a88c68;
+  transform: translateY(-2px);
+}
+
+/* Summary */
+.summary {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+/* Table Layout */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  font-size: 15px;
+  min-width: 750px;
+}
+
+th, td {
+  padding: 16px 14px;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+th {
+  background-color: #fdf6f0;
+  color: #1a1a1a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: none;
+}
+
+tr:hover td {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+td {
+  color: #555;
+}
+
+/* No expenses message */
+.no-expenses {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  margin-top: 20px;
+}
+
