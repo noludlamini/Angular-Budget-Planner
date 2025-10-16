@@ -32,7 +32,7 @@ budget-planner/
 
 ## Live Demo
 
-[Budget Planner]https://YOUR_USERNAME.github.io/luxury-budget-planner/
+[Budget Planner] 
 
 ---
 
